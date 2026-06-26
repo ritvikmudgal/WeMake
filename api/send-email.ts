@@ -10,9 +10,9 @@ export default async function handler(req: any, res: any) {
   try {
     const data = req.body;
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "WeMake <onboarding@resend.dev>",
-      to: "WeMake.webb@gmail.com", // <-- Change this
+      to: "wemake.webb@gmail.com", // <-- Change this
       subject: `🚀 New Website Consultation from ${data.clientName}`,
 
       html: `
@@ -63,6 +63,7 @@ export default async function handler(req: any, res: any) {
       <p>${data.additionalNotes}</p>
       `,
     });
+    console.log(result);
 
     return res.status(200).json({
       success: true,
