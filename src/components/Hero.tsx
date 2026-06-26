@@ -137,17 +137,25 @@ const Hero: React.FC = () => {
     stiffness: 170,
     damping: 18,
   }}
-        className="fixed left-[28%] top-[19%] z-50 w-[92%] max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-8 shadow-2xl"
-      >
+className="fixed left-[2.2%] md:left-[27%] top-[23%] md:top-[14%] z-50
+w-[92%] max-w-md md:max-w-2xl
+max-h-[90vh] overflow-y-auto
+-scrollbar-thin
+-translate-x-1/2 -translate-y-1/2
+rounded-[24px] md:rounded-[32px]
+border border-amber-300/20
+bg-white/95 backdrop-blur-2xl
+p-5 md:p-10
+shadow-[0_30px_100px_rgba(0,0,0,.25)]"      >
         <div className="inline-flex items-center rounded-full bg-amber-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-amber-700">
     LIMITED TIME
     
 </div>
-       <h2 className="mt-6 text-4xl font-black tracking-tight text-gray-900">
-    ✨ Founding Client Launch Offer
+       <h2 className="mt-4 text-2xl md:text-4xl font-black tracking-tight leading-tight">
+    ✨ Launch Offer
 </h2>
 
-        <p className="mt-5 text-lg leading-8 text-gray-600">
+        <p className="mt-3 text-sm md:text-lg leading-6 md:leading-8">
     As part of our launch, we're opening a limited number of
     <span className="font-semibold text-gray-900">
         {" "}Founding Client{" "}
@@ -160,36 +168,36 @@ const Hero: React.FC = () => {
         <div className="mt-10 grid gap-5">
 
     <div className="flex items-center gap-4">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-green-100 text-xl">
+        <div className="flex h-9 w-9 md:h-11 md:w-11 items-center justify-center rounded-full bg-green-100 text-xl">
             ✓
         </div>
-        <span className="text-lg">Introductory launch pricing</span>
+        <span className="text-sm md:text-lg">Introductory launch pricing</span>
     </div>
 
     <div className="flex items-center gap-4">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-xl">
+        <div className="flex h-9 w-9 md:h-11 md:w-11 items-center justify-center rounded-full bg-blue-100 text-xl">
             ✓
         </div>
-        <span className="text-lg">Premium custom UI & development</span>
+        <span className="text-sm md:text-lg">Premium custom UI & development</span>
     </div>
 
     <div className="flex items-center gap-4">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-purple-100 text-xl">
+        <div className="flex h-9 w-9 md:h-11 md:w-11 items-center justify-center rounded-full bg-purple-100 text-xl">
             ✓
         </div>
-        <span className="text-lg">Direct collaboration with the founder</span>
+        <span className="text-sm md:text-lg">Direct collaboration with the founder</span>
     </div>
 
-    <div className="flex items-center gap-4">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-100 text-xl">
+    <div className="hidden md:flex items-center gap-4">
+        <div className="flex h-9 w-9 md:h-11 md:w-11 items-center justify-center rounded-full bg-orange-100 text-xl">
             ✓
         </div>
-        <span className="text-lg">Priority delivery & support</span>
+        <span className="text-sm md:text-lg">Priority delivery & support</span>
     </div>
 
 </div>
 
-        <div className="mt-10 flex gap-4">
+        <div className="mt-8 flex flex-col-reverse md:flex-row gap-3">
 
           <button
             onClick={() => {
