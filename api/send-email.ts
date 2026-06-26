@@ -13,7 +13,7 @@ export default async function handler(req: any, res: any) {
     console.log("REQUEST BODY:", data);
     const result = await resend.emails.send({
       from: "WeMake <onboarding@resend.dev>",
-      to: "wemake.webb@gmail.com", // <-- Change this
+      to: "ritvik.mudgal.9a@gmail.com", // <-- Change this
       subject: `🚀 New Website Consultation from ${data.clientName}`,
 
       html: `
