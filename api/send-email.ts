@@ -9,7 +9,8 @@ export default async function handler(req: any, res: any) {
 
   try {
     const data = req.body;
-
+    console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
+    console.log("REQUEST BODY:", data);
     const result = await resend.emails.send({
       from: "WeMake <onboarding@resend.dev>",
       to: "wemake.webb@gmail.com", // <-- Change this
@@ -68,11 +69,13 @@ export default async function handler(req: any, res: any) {
     return res.status(200).json({
       success: true,
     });
-  } catch (error) {
-    console.error(error);
+  }  catch (error: any) {
+  console.error("SEND EMAIL ERROR:", error);
 
-    return res.status(500).json({
-      success: false,
-    });
-  }
+  return res.status(500).json({
+    success: false,
+    message: error?.message,
+    stack: error?.stack,
+  });
+}
 }
